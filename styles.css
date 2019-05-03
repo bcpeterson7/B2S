@@ -13,9 +13,13 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
 }
+div {
+    box-sizing: border-box;
+}
 p {
     line-height: 1.5em;
     margin-bottom: 20px;
+    margin-top: 0;
 }
 a {
     color: #000000;
@@ -27,6 +31,7 @@ h1 {
     font-weight: bold;
     letter-spacing: 0.5px;
     text-align:left;
+    margin-top: 0;
 }
 h2 {
     color: #000000;
@@ -42,17 +47,20 @@ h3 {
     font-size: 17px;
     font-weight: normal;
     margin-bottom: 5px;
+    margin-top: 0;
 }
 h4 {
     color: #00386b;
     font-size: 15px;
     padding-bottom: 10px;
     text-align: center;
+    margin-top: 0;
 }
 h5 {
     color: #999999;
     font-size: 13px;
     padding-bottom: 10px;
+    margin-top: 0;
 }
 
 ol {
@@ -75,38 +83,46 @@ ol {
     margin: 0 0;
     width: 100%;
 }
+
 #content-wide {
     float: left;
     margin: 15px 0;
     width: 100%;
 }
+
 .main {
     background: none repeat 0 0 #FFFFFF;
     position: relative;
     top: 48px;
-    padding: 0 1% 0 1%;
+    padding: 0;
     margin: 0 auto;
-    width: 98%;
+    width: 100%;
 }
+
 .news-item {
     padding-bottom: 10px;
     padding-top: 10px;
 }
+
 .latest-news a {
     font-weight: bold;
 }
+
 .date {
     color: #000000;
     font-weight: bold;
 }
+
 .footer {
     position: relative;
     background-color: #55575E;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,.5) inset;
     margin: 48px auto 0 auto;
     padding: 12px 0;
     text-align: center;
     width: 100%;
 }
+
 .footer p {
     position: relative;
     color: #FFFFFF;
@@ -116,8 +132,15 @@ ol {
     margin: 0 auto;
     padding: 0 10px;
 }
+
 .footer p a {
     color: #FFFFFF;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer p span {
+    display: inline-block;
 }
 
 .clear { clear: both;}
@@ -127,14 +150,17 @@ ol {
     float: left;
     position:relative;
 }
+
 .imgteaser a {
     text-decoration: none;
     overflow: hidden;
     float: left;
 }
+
 .imgteaser a:hover {
     cursor: pointer;
 }
+
 .imgteaser a img {
     float: left;
     margin: 0;
@@ -142,6 +168,7 @@ ol {
     border: none;
     background: #fff;
 }
+
 .imgteaser a .more {
     position: absolute;
     right: 0;
@@ -168,6 +195,7 @@ ol {
 }
 
 .app-bar {
+
     margin: 0;
     padding: 0;
     width: 100%;
@@ -199,7 +227,6 @@ ol {
     max-width: none;
     height: 57px;
 }
-
 .app-bar .logo a {
     text-decoration: none;
     color: inherit;
@@ -207,6 +234,7 @@ ol {
     display: block;
 }
 */
+
 .app-bar .bttn {
     width: 65px;
     height: 57px;
@@ -225,7 +253,6 @@ ol {
     width: 65px;
     height: 57px;
 }
-
 
 .app-bar .bttn:hover , .app-bar  .bttn a:hover {
     background-color: #58c9d7; /* Old browsers */
@@ -250,6 +277,7 @@ ol {
 
 .nav-container {
     position: absolute;
+    top: 0;
     width: 200px;
     background-color: #03B8AF;
     color: #fefefe;
@@ -325,42 +353,52 @@ ol {
     height: 57px;
     margin-top: -61px;
 }
+
 #top-bar-container {
     text-align: center;
 }
+
 #top-bar-ul,
 .top-bar-li {
     list-style-type: none;
     margin: 0 0 0 20px;
     box-sizing: border-box;
 }
+
 .top-bar-li {
     color: white;
     text-shadow: 1px 1px 1px rgba(0,0,0,.5);
 }
+
 .top-bar-li #top-left {
     float: left;
 }
+
 .top-bar-li #call-now {
     float: left;
 }
+
 #top-bar p {
     font-size: 18px;
     font-weight: 600;
     line-height: 18px;
 }
+
 #top-bar a {
     font-size: 22px;
     font-weight: 600;
     line-height: 18px;
     text-decoration: none;
 }
+
 .top-bar-li #top-left p span { display: block; float: left; }
+
 #top-bar-phone {
     font-size: 18px;
     line-height: 18px;
     color: #02D1C7;
 }
+
 #top-bar-phone:active,
 #top-bar-phone:hover {
     /*	color: white; */
@@ -370,133 +408,285 @@ ol {
 .wide  {
     display: none;
 }
+
 .medium  {
     display: none;
 }
 
-@media all and (min-width: 703px) {    /*   -----------------  Tablets  ---------------------------   */
-    h1 {
-        color: #000000;
-        font-family: Arial,Helvetica,sans-serif;
-        font-size: 24px;
-        font-weight: bold;
-        letter-spacing: 0.5px;
+.banner-text {
+    background-color:#55575e;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    text-align:center;
+    color:white;
+    font-size:28px;
+    padding: 14px 8px;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,.5) inset;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+    clear: both;
+}
+
+#featured-image-container img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.content-wrapper {
+    width: 96%;
+    padding: 2%;
+    margin: 0 auto;
+}
+
+@media all and (max-width: 702px) {    /*   -----------------  Mobile Only  ---------------------------   */
+
+    body { font-size: 16px; }
+
+    h1, h2, h3, h4, h5, h6 {
+        text-align: center;
     }
 
-    #top-bar p {
-        font-size: 19px;
-        font-weight: 300;
-        line-height: 18px;
+    .mobile-hide { display: none; }
+    .mobile-break {
+        display: block;
+        clear: both;
+        width: 100%;
+        height: 0;
     }
-    #top-bar a {
-        font-size: 21px;
-        font-weight: 300;
-        line-height: 18px;
-        text-decoration: none;
-    }
-    #top-bar-ul,
-    .top-bar-li {
-        margin: 0 20px;
-    }
+
     .top-bar-li #call-now {
-        float: right;
+        float: left;
+        width: 100%;
+        text-align: right;
+        padding-right: 20px;
     }
-    .main {
-        top: 0px;
-        margin-top: 146px;
-        padding: 0px 8px;
-        width: 98%;
-        border-top: 2px #54d7c5 solid !important;
+    .top-bar-li #call-now p {
+        line-height: 57px;
+        margin-bottom: 0;
     }
+
     .app-bar {
         display: block;
-        height: 0;
+        height: auto;
         padding: 0 0px;
         position: relative;
         box-sizing: border-box;
         background-color: #ffffff;
+        overflow: hidden; /* causes container to stretch in height to contain child elements */
+        border-bottom: 2px solid #35C6BF;
     }
 
     .app-bar .logo {
-        padding: 0;
-        width: 140px;
-        height: 70px;
-        background-color: #ffffff;
-        background: url("./images/logo1.jpg") no-repeat;
-        background-position: center;
+  		  padding: 0;
+  		  width: 100%;
+  		  height: 60px;
+  		  background-color: #ffffff;
+  		  background: url("./images/logo1.jpg") no-repeat;
+  		  background-position: center;
         line-height: 40px;
         color: transparent;
-        float: none;
-        margin: 12px auto 2px auto;
+        background-size: 110px 55px;
     }
 
-    .app-bar .logo a {
-        padding-left: 41%; /* no transparent text in older browsers */
-        font-size: 0px;
+    .main {
+        top: 0;
     }
 
-    .medium  {
+    .banner-text {
+        font-size: 22px;
+    }
+
+    #homepage-flex-reorder {
+        display: flex;
+        flex-direction: column;
+    }
+    #homepage-flex-reorder img,
+    #homepage-flex-reorder h1
+    #homepage-flex-reorder div {
+        flex: auto;
+    }
+    #content-image-1 {
+        width: 110% !important;
+        margin-left: -5% !important;
+        float: none !important;
+        padding: 20px 0 !important;
+    }
+
+    #flex-order-1 { order: 1; }
+    #flex-order-2 { order: 2; }
+    #flex-order-3 { order: 3; }
+    #content-image-1 { order: 4; }
+    #flex-order-5 { order: 5; }
+    #flex-order-6 { order: 6; }
+
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .footer p a,
+    .footer p span {
+        clear: both;
         display: block;
     }
+    .footer p span.copyright-comma,
+    .footer p span.footer-spacers {
+        display: none;
+    }
+}
+
+@media all and (max-width: 420px) {    /*   -----------------  Mobile Only Portrait  ---------------------------   */
+
+    .banner-text {
+        font-weight: bold;
+        font-size: 18px;
+    }
+    #homepage-banner-2 {
+        font-size: 17px;
+    }
+    h1 {
+        font-size: 16px;
+    }
+
+}
+
+@media all and (min-width: 703px) {    /*   -----------------  Tablets  ---------------------------   */
+    h1 {
+    		color: #000000;
+    		font-family: Arial,Helvetica,sans-serif;
+    		font-size: 24px;
+    		font-weight: bold;
+    		letter-spacing: 0.5px;
+	  }
+
+		#top-bar p {
+
+  		  font-size: 19px;
+  		  font-weight: 300;
+  		  line-height: 18px;
+		}
+
+		#top-bar a {
+  		  font-size: 21px;
+  		  font-weight: 300;
+  		  line-height: 18px;
+  		  text-decoration: none;
+		}
+
+		#top-bar-ul,
+		.top-bar-li {
+		    margin: 0 20px;
+		}
+
+		.top-bar-li #call-now {
+		    float: right;
+		}
+
+		.main {
+  		  top: 0px;
+  		  margin-top: 0;
+  		  padding: 0;
+  		  width: 100%;
+  		  border-top: 2px #54d7c5 solid !important;
+		}
+
+    .app-bar {
+        display: block;
+        height: auto;
+        padding: 0 0px;
+        position: relative;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        overflow: hidden; /* causes container to stretch in height to contain child elements */
+    }
+
+    .app-bar .logo {
+  		  padding: 0;
+  		  width: 100%;
+  		  height: 80px;
+  		  background-color: #ffffff;
+  		  background: url("./images/logo1.jpg") no-repeat;
+  		  background-position: center;
+        line-height: 40px;
+        color: transparent;
+    }
+
+		.app-bar .logo a {
+        padding-left: 41%; /* no transparent text in older browsers */
+  		  font-size: 0px;
+		}
+
+		.medium  {
+			   display: block;
+		}
+
+    .content-wrapper {
+        width: 100%;
+        padding: 50px;
+    }
+
 }
 
 @media all and (min-width: 1224px) {    /*   -----------------  Desktops  --------------------------   */
     h1 {
-        color: #000000;
-        font-family: Arial,Helvetica,sans-serif;
-        font-size: 32px;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-    }
+    		color: #000000;
+    		font-family: Arial,Helvetica,sans-serif;
+    		font-size: 32px;
+    		font-weight: bold;
+    		letter-spacing: 0.5px;
+	  }
 
     body {
         position: relative;
         padding-top: none;
-        font-size: 18px;
+  		  font-size: 18px;
     }
 
-    #container {
-        background: none repeat scroll 0 0 #FFFFFF;
+		#container {
+  		  background: none repeat scroll 0 0 #FFFFFF;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-    }
+		}
 
-    #container-inner {
-        background: none repeat scroll 0 0 #FFFFFF;
-        margin: 0 auto;
-        padding: 0;
-        width: 100%;
-    }
+		#container-inner {
+  		  background: none repeat scroll 0 0 #FFFFFF;
+  		  margin: 0 auto;
+  		  padding: 0;
+  		  width: 100%;
+		}
 
-    .main {
-        top: 0px;
-        margin-top: 66px;
-        padding: 0px 8px;
-        width: 98%;
-        border-top: 2px #54d7c5 solid !important;
-    }
+		.main {
+  		  top: 0px;
+  		  margin-top: 0;
+  		  padding: 0;
+  		  width: 100%;
+  		  border-top: 2px #54d7c5 solid !important;
+		}
 
-    #content {
-        float: left;
-        margin: 15px 0;
-        padding-right: 6px;
-        width: 97%;
-    }
+		#content {
+  		  float: left;
+  		  margin: 0;
+  		  padding-right: 0;
+  		  width: 100%;
+		}
 
-    #content-wide {
-        float: left;
-        margin: 15px 0;
-        padding-right: 6px;
-        width: 0%;
-    }
+		#content-wide {
+  		  float: left;
+  		  margin: 15px 0;
+  		  padding-right: 6px;
+  		  width: 0%;
+     }
 
-    #footer {
-        margin: 0 auto;
-    }
+		#footer {
+		    margin: 0 auto;
+		}
+
     .app-bar {
         display: block;
-        height: 80px;
+        height: auto;
         padding: 0 0px;
         position: relative;
         box-sizing: border-box;
@@ -504,21 +694,21 @@ ol {
     }
 
     .app-bar .logo {
-        padding: 0;
-        width: 140px;
-        height: 70px;
-        background-color: #ffffff;
-        background: url("./images/logo1.jpg") no-repeat;
+  		  padding: 0;
+  		  width: 140px;
+  		  height: 70px;
+  		  background-color: #ffffff;
+  		  background: url("./images/logo1.jpg") no-repeat;
         line-height: 40px;
-        color: transparent;
+  		  color: transparent;
         float: left;
-        margin: 12px 0 2px 68px;
+        margin: 12px 0 2px 43px;
     }
 
-    .app-bar .logo a {
+		.app-bar .logo a {
         padding-left: 41%; /* no transparent text in older browsers */
-        font-size: 0px;
-    }
+  		  font-size: 0px;
+		}
 
     .app-bar:after {
         content: ' ';
@@ -531,25 +721,29 @@ ol {
     .menu .bttn  {
         display: none;
     }
+
     .logo .logobttn {
         display: none;
     }
+
     .nav {
         display: block;
     }
 
     .nav-container {
         /* clear: both; */
-        position: relative;
+        position: absolute;
+        top: 57px;
+        right: 30px;
         width: 913px;
-        margin-top: 0;
-        float: right;
-        background-color: #FFFFFF;
-        padding: 0 50px 0 0;
-        -webkit-transform: translate(0,0);
-        -ms-transform:translate(0,0);
-        transform:translate(0,0);
-        -webkit-transition: -webkit-transform 0 ease-out;
+  		  margin-top: 0;
+  		  float: right;
+  		  background-color: #FFFFFF;
+  		  padding: 0 0 0 0;
+  		  -webkit-transform: translate(0,0);
+  		  -ms-transform:translate(0,0);
+  		  transform:translate(0,0);
+  		  -webkit-transition: -webkit-transform 0 ease-out;
         transition: transform 0 ease-out;
     }
 
@@ -564,40 +758,39 @@ ol {
         -ms-flex-direction: row;
         -webkit-flex-direction: row;
         flex-direction: row;
-        display: block;
-        list-style: none outside none;
-        margin: 0;
-        padding-left: 0;
-        float: right;
+  		  display: block;
+  		  list-style: none outside none;
+  		  margin: 0;
+  		  padding-left: 0;
+  		  float: right;
     }
 
-
     .nav-container ul li {
-        display: block;
-        float: left;
+  		  display: block;
+  		  float: left;
         border: none;
     }
 
-    .nav-container ul li.first a{
+		.nav-container ul li.first a{
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-    }
+		}
 
-    .nav-container ul li a {
-        display: block;
-        height: 54px;
-        padding: 0 10px;
-        line-height: 54px;
-        text-decoration: none;
-        color: #414042;
-        -webkit-transition: background-color 0.2s ease-out;
-        transition: background-color 0.2s ease-out;
-        font-size: 18px;
-        font-weight: 400;
-        text-transform: uppercase !important;
-        float: right;
-    }
+		.nav-container ul li a {
+  		  display: block;
+  		  height: 84px;
+        line-height: 84px;
+  		  padding: 0 10px;
+  		  text-decoration: none;
+  		  color: #414042;
+  		  -webkit-transition: background-color 0.2s ease-out;
+  		  transition: background-color 0.2s ease-out;
+  		  font-size: 18px;
+  		  font-weight: 400;
+  		  text-transform: uppercase !important;
+  		  float: right;
+		}
 
     .app-bar.open, .main.open, .footer.open {
         -webkit-transition: background-color 0 ease-out;
@@ -607,12 +800,20 @@ ol {
         transform: translate(0,0);
     }
 
-    #top-bar,
-    .top-bar-li {
-        margin-top: 0px;
+    #top-bar, .top-bar-li {
+      margin-top: 0;
     }
+    ul#top-bar-ul {
+        margin: 0;
+        padding: 0 20px;
+    }
+		.top-bar-li {
+        margin: 0;
+        padding: 0 20px;
+		}
 
-    .wide  {
+		.wide  {
         display: block;
-    }
+		}
+
 }
